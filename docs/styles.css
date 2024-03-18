@@ -1,0 +1,89 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ensure the .home-page class takes up full screen */
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% of the viewport height */
+}
+
+/* Style for the banner section */
+#banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Make the banner take the full viewport height */
+    background-image: url('photos/2024-03-18 (2).png');
+    background-size: cover; /* Cover the entire section with the image */
+    background-position: center; /* Center the background image */
+}
+
+/* Style for the text inside the banner */
+.banner-text {
+    color: white; /* Make text color white */
+    text-align: center; /* Center the text horizontally */
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the div exactly in the middle */
+}
+/* Heading style */
+.banner-text h1 {
+    margin: 0; /* Remove default margin */
+    padding: 0;
+    font-size: 100px; /* Example font size, adjust as needed */
+}
+/* Style for the logo underneath the banner text */
+.banner-logo {
+    position: absolute;
+    top: 55%; /* Position the logo just below the text */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the logo */
+}
+
+.banner-logo img {
+    max-width: 200px; /* Example size, adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Rest of your CSS */
+
+/* Styles for the top navigation bar */
+.top-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(212, 212, 212); /* Your desired color */
+    z-index: 1000; /* Ensures the nav is above other content */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-evenly; /* This will space your nav items evenly */
+    align-items: center;
+    padding: 10px 0; /* Add some padding to give some height to the nav bar */
+}
+
+.nav-container a {
+    color: rgb(0, 0, 0); /* Set the color of the nav links */
+    text-decoration: none; /* Remove the underline from links */
+    font-size: 16px; /* Set the size of the nav link text */
+    padding: 5px 10px; /* Optional: add padding to the links for a button-like feel */
+}
+
+.nav-container a:hover {
+    background-color: rgb(212, 208, 208); /* Optional: change color on hover for visual feedback */
+}
+.nav-logo {
+    max-height: 50px; /* Adjust the height to suit your design */
+    width: auto; /* To maintain aspect ratio */
+    flex-shrink: 0; /* Prevent the logo from shrinking */
+    margin-right: 20px; /* Add some space between the logo and the first link */
+    margin-left: -150px;
+}
+
