@@ -500,6 +500,7 @@ justify-content: left;
 }
 
 /*follow us*/
+
 #FOLLOW-ME {
     padding: 100px 0 20px;
     background: #001936;
@@ -507,26 +508,26 @@ justify-content: left;
 }
 
 .social-links {
-    display: inline-block; /* Centralizes the inline elements */
+    display: inline-block; 
 }
 
 .social-icon {
-    text-decoration: none; /* Removes underline from links */
-    color: white; /* White text color */
-    margin: 0 15px; /* Spacing between icons */
-    display: inline-block; /* Allows icons to sit side by side */
-    background: transparent; /* No background color */
-    border-radius: 50%; /* Rounds the corners of the clickable area */
-    padding: 20px; /* Space around the icon */
-    transition: all 0.3s ease; /* Smooth transition for all properties */
-    position: relative; /* Needed for absolute positioning of the pseudo-elements */
-    overflow: hidden; /* Ensures pseudo-elements don't overflow the parent container */
+    text-decoration: none; 
+    color: white; 
+    margin: 0 15px; 
+    display: inline-block; 
+    background: transparent; 
+    border-radius: 50%; 
+    padding: 20px; 
+    transition: all 0.3s ease; 
+    position: relative; 
+    overflow: hidden; 
 }
 
 .social-icon i {
-    transition: transform 0.6s ease; /* Smooth transition for transform properties */
-    font-size: 80px; /* Adjust this value to make the icons bigger or smaller */
-    transition: transform 0.5s ease; /* Smooth transition for transform properties */
+    transition: transform 0.6s ease; 
+    font-size: 80px; 
+    transition: transform 0.5s ease; 
 
 }
 
@@ -539,17 +540,117 @@ justify-content: left;
     border-radius: 50%;
     width: 100%;
     height: 100%;
-    background-color: #1c6f96; /* Background color for the circle */
+    background-color: #1c6f96; 
     z-index: 0;
-    transition: transform 0.3s ease; /* Smooth transition for the circle */
+    transition: transform 0.3s ease; 
 }
 
 .social-icon:hover::before {
-    transform: translate(-50%, -50%) scale(1.2); /* Enlarges the circle on hover */
+    transform: translate(-50%, -50%) scale(1.2); 
 }
 
 .social-icon:hover i {
-    color: #fff; /* White color for icons on hover */
-    transform: rotate(360deg); /* Rotates the icon on hover */
-    z-index: 1; /* Ensures the icon stays above the pseudo-element */
+    color: #fff; 
+    transform: rotate(360deg); 
+    z-index: 1; 
 }
+
+/*smaller screens*/
+
+@media screen and (max-width: 768px) {
+    body, html {
+        padding: 0 10px; /* Slight padding on smaller screens */
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-text h1 {
+        font-size: 50px; /* Smaller font size for the banner text */
+    }
+
+    .title-text h1, .title-text h5, .section-title {
+        font-size: 30px; /* Adjust title sizes in various sections */
+    }
+
+    .about-row, .portfolio-box {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Single column layout for projects */
+    }
+
+    .content-wrapper, .content-wrapper2 {
+        flex-direction: column; /* Stack content vertically in project sections */
+        align-items: center; /* Center-align the content */
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .image-content, .image-content2 {
+        order: -1; /* Move images above text content */
+    }
+
+    .text-content, .text-content2, .image-content, .image-content2 {
+        padding: 10px 0; /* Adjust padding for spacing */
+        flex-basis: auto; /* Allow flex items to adjust naturally */
+    }
+
+    .social-icon i {
+        font-size: 40px; /* Smaller icons in the social links section */
+    }
+    
+    .portfolio-container {
+        display: flex; /* Use flexbox to center children */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically if needed */
+    }
+    
+    .portfolio-img img {
+        margin: auto; /* Center the image within the flex container */
+        max-width: 100%; /* Ensure the image is not larger than the container */
+        height: 100%; /* Maintain aspect ratio */
+    }
+    
+    
+}
+
+@media screen and (max-width: 480px) {
+    .banner-text h1 {
+        font-size: 40px; /* Even smaller font size for ultra-small screens */
+    }
+    .title-text h1, .title-text h5, .section-title {
+        font-size: 25px; /* Further reduce title sizes */
+    }
+
+    .about-col, .portfolio, .portfolio-img img, .project-item, .text-content, .text-content2 {
+        width: 100%; /* Ensure these elements use the full width available */
+    }
+
+    .social-icon {
+        padding: 15px; /* Smaller padding around social icons */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+        padding: 10px 5px; /* Adjust padding as needed */
+    }
+
+    .nav-logo {
+        margin-right: 10px; /* Adjust for smaller screen */
+        margin-left: 0;
+        width: auto; /* Or you can set a max-width */
+        height: auto; /* Adjust the size as necessary */
+    }
+
+    .nav-container a {
+        padding: 5px; /* Reduced padding */
+        font-size: 14px; /* Smaller font size */
+        margin: 2px; /* Adjust spacing around links */
+    }
+}
+
