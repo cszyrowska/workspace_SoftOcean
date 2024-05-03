@@ -7,7 +7,7 @@ body, html {
     position: relative;
     width: 100%;
     height: 100vh; 
-    background-image: url('photos/2024-03-18 (2).png');
+    background-image: url('photos/background.png');
     background-size: cover; 
     background-position: center;
 }
@@ -191,112 +191,7 @@ justify-content: left;
     transform: translateY(-9px);
 }
 
-/*portfolio*/
-
-#portfolio {
-    width: 100%;
-    padding: 70px 0;
-    background: #001936; 
-    text-align: center; 
-}
-
-.title-text {
-    text-align: center;
-    width: 80%; 
-    margin: auto;
-}
-
-.title-text p {
-    margin: auto;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    font-weight: normal;
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-}
-
-.title-text h1 {
-    font-size: 55px;
-    color: #107eb1;
-    margin-bottom: 20px; 
-}
-.portfolio h2 {
-    font-size: 40px;
-    color: #107eb1;
-    margin-bottom: 20px; 
-}
-.portfolio-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left; 
-    margin: auto; 
-    width: 100%; 
-}
-
-.portfolio {
-    flex-basis: 50%; 
-}
-
-.portfolio-img {
-    flex-basis:  40%;
-    margin: auto;
-}
-
-.portfolio-container {
-    text-align: center; 
-}
-
-.portfolio-img img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    margin: 60px;
-}
-
-.portfolio-text {
-    width: 100%; 
-}
-
-.portfolio h1{
-    text-align: left;
-    margin-bottom: 10px;
-    font-weight: 100;
-     color: rgb(255, 255, 255);
-}
-
-.portfolio-desc{
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-    justify-content: start;
-}
-
-    .portfolio-icon .fa{
-    color:#0a58ff;
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
-}
-        
-.portfolio-text {
-    max-width: 100%; 
-}
-
-.portfolio-text p {
-    font-size: 20px; 
-    line-height: 1.4; 
-    text-align: justify; 
-    margin: 0; 
-    padding: 0 10px; 
-    white-space: normal; 
-}
-
 /*projects section*/
-
 #projects {
     padding: 70px 0;
     background: #001936; /* Light background to keep it fresh and modern */
@@ -317,7 +212,7 @@ justify-content: left;
 }
 
 .project-item {
-    background: white;
+    background: rgb(255, 255, 255);
     box-shadow: 0 8px 16px rgb(255, 255, 255)255, 0.1;
     border-radius: 8px;
     overflow: hidden;
@@ -384,120 +279,177 @@ justify-content: left;
     }
 }
 
-/*project one*/
+/* Gallery Section Styling */
 
-.project-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0 auto;
-    background-color: #001936;
-    font-family: 'Arial', sans-serif;
-}
-
-.content-wrapper {
-    display: flex;
-    max-width: 1200px;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-}
-
-.text-content {
-    flex-basis: 50%;
-    padding-right: 20px;
-    transition: transform 0.3s ease;
-}
-
-.text-content h1 {
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.text-content p {
-    line-height: 1.6;
-    color: #fff;
-}
-
-.image-content {
-    flex-basis: 50%;
+.gallery-section {
+    padding: 50px 0;
+    background: #001936;
     text-align: center;
-    transition: transform 0.3s ease;
 }
 
-.project-image {
-    width: 80%;
-    transition: transform 0.3s ease;
+.gallery-section h2 {
+    font-size: 36px; /* Larger font size */
+    color: #fff; /* White color for better visibility on dark background */
+    margin-bottom: 50px; /* Increased bottom margin to create space from the images */
+    font-weight: bold; /* Making the font bold for better emphasis */
 }
 
-.text-content:hover {
-    transform: translateX(10px);
-}
-
-.text-content:hover ~ .image-content .project-image {
-    transform: scale(1.05) rotate(5deg);
-}
-
-/*section2 flipped*/
-
-.project-section2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0 auto;
-    background-color: #001936;
-    font-family: 'Arial', sans-serif;
-}
-
-.content-wrapper2 {
-    display: flex;
+.gallery-container {
+    width: calc(100% - 40px);
     max-width: 1200px;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
+    margin: auto;
+    padding: 20px;
 }
 
-/* Ensure the image is on the left and text on the right */
-.content-wrapper2 {
-    flex-direction: row;
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
-.text-content2 {
-    flex-basis: 50%;
-    padding-left: 20px;
+.gallery-item {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    position:relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
     transition: transform 0.3s ease;
 }
 
-.text-content2 h1 {
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-.text-content2 p {
-    line-height: 1.6;
-    color: #ffffff;
-}
-
-.image-content2 {
-    flex-basis: 50%;
+.image-caption {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     text-align: center;
+    font-size: 16px;
     transition: transform 0.3s ease;
 }
 
-.project-image2 {
-    width: 80%;
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover .image-caption {
+    transform: translateY(-100%);
+}
+#project2-gallery .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns when there are more than 2 images */
+}
+
+.gallery-item {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
     transition: transform 0.3s ease;
 }
 
-.text-content2:hover {
-    transform: translateX(-10px);
+.image-caption {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    transition: transform 0.3s ease;
 }
 
-.text-content2:hover ~ .image-content2 .project-image2 {
-    transform: scale(1.05) rotate(-5deg);
+.gallery-item:hover img {
+    transform: scale(1.1);
 }
+
+.gallery-item:hover .image-caption {
+    transform: translateY(-100%);
+}
+
+/* Additional styling for gallery titles */
+.gallery-section h2 {
+    font-size: 36px; /* Larger font size */
+    color: #fff; /* White color for better visibility on dark background */
+    margin-bottom: 50px; /* Increased bottom margin to create space from the images */
+    font-weight: bold; /* Making the font bold for better emphasis */
+}
+
+
+/*portfolio*/
+#portfolio {
+    width: 100%;
+    padding: 70px 0;
+    background: #001936; 
+    text-align: center; 
+}
+
+.title-text {
+    text-align: center;
+    width: 80%; 
+    margin: 0 auto 50px; /* Add some bottom margin */
+}
+
+.title-text p {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.title-text h1 {
+    font-size: 55px;
+    color: #107eb1;
+    margin-bottom: 20px; 
+}
+
+.portfolio-box {
+    display: flex;
+    justify-content: space-around; /* Changed to space-around for better spacing */
+    align-items: center; /* Ensures vertical alignment */
+    flex-wrap: wrap; /* Allows wrapping */
+    margin: 0 auto;
+    max-width: 1200px; /* Limiting the maximum width */
+}
+
+.portfolio {
+    flex: 1 1 50%; /* Flex grow, flex shrink, flex basis */
+    max-width: 60%; /* Adjust based on preference */
+    padding: 20px;
+}
+
+.portfolio-text p {
+    color: #f0f0f0;
+    font-size: 18px;
+    line-height: 1.6; /* Improved line spacing for better readability */
+    text-align: justify; /* Justify the text for better alignment */
+    margin-bottom: 20px; /* Adds bottom margin */
+}
+
+.portfolio-img {
+    flex: 1 1 40%; /* Flex grow, flex shrink, flex basis */
+    max-width: 40%; /* Adjust based on preference */
+    text-align: center; /* Center the images within the container */
+}
+
+.portfolio-img img {
+    width: 100%;
+    max-width: 400px; /* Adjusted for better control */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Adding shadow for depth */
+}
+
 
 /*follow us*/
 
