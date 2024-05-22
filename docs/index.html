@@ -178,38 +178,36 @@
     </section>
 
  <!-- Project 3 Gallery -->
-<section id="project3-gallery" class="gallery-section">
+ <section id="project3-gallery" class="gallery-section">
     <div class="gallery-container">
         <h2>Geophysical surveys</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <!-- Added data-url attribute for JavaScript handling -->
-                <img src="photos/2024-05-13_19-35.png" alt="Project 3 Image 1" class="interactive-image" data-url="C:\Users\cszyr\workspace_SoftOcean\docs\GeomaresSylt.html">
+                <img src="photos/2024-05-13_19-35.png" alt="Project 3 Image 1" class="interactive-image" data-url="docs/GeomaresSylt.html">
                 <p class="image-caption">Click image to interact</p>
             </div>
             <div class="gallery-item">
-                <!-- Added data-url attribute for JavaScript handling -->
-                <img src="photos/2024-05-13_19-36.png" alt="Project 3 Image 2" class="interactive-image" data-url="C:\Users\cszyr\workspace_SoftOcean\docs\vis_path_amp.html">
+                <img src="photos/2024-05-13_19-36.png" alt="Project 3 Image 2" class="interactive-image" data-url="docs/vis_path_amp.html">
                 <p class="image-caption">Click image to interact</p>
             </div>
         </div>
     </div>
 </section>
 
+<!-- Add your JavaScript at the end of the body or in a separate JS file -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const images = document.querySelectorAll('.interactive-image');
+        const interactiveImages = document.querySelectorAll('.interactive-image');
         
-        images.forEach(image => {
+        interactiveImages.forEach(function(image) {
             image.addEventListener('click', function() {
-                const url = this.getAttribute('data-url');
-                if (url) {
-                    window.open(url, '_blank'); // This will open the link in a new tab
-                }
+                const url = image.getAttribute('data-url');
+                window.location.href = url;
             });
         });
     });
-    </script>
+</script>
+
     
 
 
