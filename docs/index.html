@@ -177,8 +177,9 @@
         </div>
     </section>
 
- <!-- Project 3 Gallery -->
- <section id="project3-gallery" class="gallery-section">
+
+<!-- Project 3 Gallery -->
+<section id="project3-gallery" class="gallery-section">
     <div class="gallery-container">
         <h2>Geophysical surveys</h2>
         <div class="gallery-grid">
@@ -194,21 +195,23 @@
     </div>
 </section>
 
-
 <!-- Add your JavaScript at the end of the body or in a separate JS file -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const interactiveImages = document.querySelectorAll('.interactive-image');
-        
+
         interactiveImages.forEach(function(image) {
             image.addEventListener('click', function() {
                 const url = image.getAttribute('data-url');
-                window.location.href = url;
+                if (url) {
+                    window.location.href = url;
+                } else {
+                    console.error('URL not found for image:', image);
+                }
             });
         });
     });
 </script>
-
 
     
 
