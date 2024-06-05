@@ -1,82 +1,69 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VisPath.sct_path</title>
+    <style>
+        .top-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgb(212, 212, 212);
+            z-index: 1000;
+        }
 
-<style>
-  .top-nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: rgb(212, 212, 212);
-      z-index: 1000;
-  }
+        .nav-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px 0;
+        }
 
-  .nav-container {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      padding: 10px 0;
-  }
+        .nav-container a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
 
-  .nav-container a {
-      color: rgb(0, 0, 0);
-      text-decoration: none;
-      font-size: 16px;
-      padding: 5px 10px;
-  }
+        .nav-container a:hover {
+            background-color: #d4d0d0;
+        }
 
-  .nav-container a:hover {
-      background-color: #d4d0d0;
-  }
+        .nav-logo {
+            max-height: 50px;
+            width: auto;
+            flex-shrink: 0;
+            margin-right: 20px;
+            margin-left: -100px;
+        }
 
-  .nav-logo {
-      max-height: 50px;
-      width: auto;
-      flex-shrink: 0;
-      margin-right: 20px;
-      margin-left: -100px;
-  }
-</style>
+        body {
+            margin-top: 80px; /* Adjust this value to match the height of your navigation bar */
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
 </head>
 <body class="home-page">
 <nav class="top-nav">
-  <div class="nav-container">
-      <img src="photos/soft_ocean_final.png" alt="Your Logo" class="nav-logo">
-      <a href="../index.html#home-page">Home</a>
-      <a href="../index.html#about">About Us</a>
-      <a href="../index.html#projects">Projects</a>
-      <a href="../index.html#portfolio">Aims</a>
-      <a href="../index.html#FOLLOW-ME">Contact</a>
-  </div>
+    <div class="nav-container">
+        <img src="photos/soft_ocean_final.png" alt="Your Logo" class="nav-logo">
+        <a href="../index.html#home-page">Home</a>
+        <a href="../index.html#about">About Us</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#portfolio">Aims</a>
+        <a href="../index.html#FOLLOW-ME">Contact</a>
+    </div>
 </nav>
-</body>
 
+<div class="bk-root" id="2b771b65-02c3-4bf0-9fee-fc6140190f1f" data-root-id="3432"></div>
 
-  
-  <head>
-    
-      <meta charset="utf-8">
-      <title>VisPath.sct_path</title>
-      
-      
-        
-          
-        
-        
-          
-        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>
-        <script type="text/javascript">
-            Bokeh.set_log_level("info");
-        </script>
-        
-      
-      
-    
-  </head>
-  
   
   <body>
     
