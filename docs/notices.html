@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third-Party Notices | SoftOcean Ltd</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #001936; --accent: #107eb1; --text: #f0f0f0; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; line-height: 1.8; }
+        header { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)); padding: 80px 5%; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--accent); margin: 0; }
+        .container { width: 90%; max-width: 1400px; margin: 0 auto; padding: 60px 0; }
+        section { margin-bottom: 40px; padding: 30px; background: rgba(255,255,255,0.02); border-left: 3px solid var(--accent); }
+        h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--accent); margin-top: 0; }
+        .nav-back { text-decoration: none; color: var(--accent); font-weight: bold; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; }
+        ul { list-style: none; padding: 0; margin: 0; }
+        li { margin-bottom: 10px; color: #cbd5e0; }
+        strong { color: #fff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="nav-back">← Back to SoftOcean</a>
+            <h1>Third-Party Notices</h1>
+            <p style="color: var(--accent); margin-top: 10px;">Effective date: 26 January 2026</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <p style="margin-bottom: 40px; font-weight: 300;">This document lists the main third-party services used to operate Plaspa. This is not a replacement for those providers’ own terms and policies.</p>
+
+        <section>
+            <h2>1. Hosting & Infrastructure</h2>
+            <ul>
+                <li><strong>Google Cloud Run:</strong> Hosts our primary backend service.</li>
+                <li><strong>Google Cloud Logging:</strong> Stores operational logs for security and monitoring.</li>
+                <li><strong>Google Artifact Registry:</strong> Manages container images for deployment.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Crash Reporting</h2>
+            <ul>
+                <li><strong>Sentry:</strong> Used to collect crash and error reports to improve stability. Sentry receives diagnostic events when the App encounters an error.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Open-source Software</h2>
+            <p>The App includes open-source libraries. Licensing and attribution notices are available within the App Settings under "Third-Party Licences".</p>
+        </section>
+    </div>
+</body>
+</html>

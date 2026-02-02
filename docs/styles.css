@@ -614,3 +614,76 @@ justify-content: left;
     height: 100%;
     z-index: 1; /* Ensure this doesn't overlap important elements */
 }
+
+/* Sophisticated Button for PlanktoSpace Gallery */
+.sophisticated-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: transparent;
+    color: #107eb1;
+    border: 2px solid #107eb1;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.sophisticated-btn:hover {
+    background-color: #107eb1;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(16, 126, 177, 0.4);
+    transform: translateY(-3px);
+}
+/* PlanktoSpace Split Gallery Layout */
+.app-split-container {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 40px;
+    text-align: left; /* Makes text look cleaner on the right */
+}
+
+.app-split-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.app-split-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border: 1px solid rgba(16, 126, 177, 0.3);
+}
+
+.app-split-info {
+    flex: 1.2;
+}
+
+.app-split-info p {
+    color: #cbd5e0;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.app-button-wrapper {
+    margin-top: 35px;
+}
+
+/* Responsive adjustment: Stack them on top of each other on mobile */
+@media screen and (max-width: 992px) {
+    .app-split-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .app-split-image {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+}
