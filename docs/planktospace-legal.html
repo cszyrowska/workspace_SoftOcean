@@ -3,35 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlanktoSpace Legal | SoftOcean Ltd</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <title>PlanktoSpace | User Guide & Operational Manual</title>
+    <!-- Sophisticated Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #001936; --accent: #107eb1; --text: #f0f0f0; }
-        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; line-height: 1.8; text-align: center; }
-        header { padding: 100px 5% 40px; background: linear-gradient(rgba(0,0,0,0.4), transparent); }
-        h1 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--accent); margin: 0; }
-        .subtitle { color: #cbd5e0; font-size: 1.2rem; font-weight: 300; margin-top: 10px; }
-        .container { width: 90%; max-width: 1000px; margin: 0 auto; padding: 60px 0; }
-        .legal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 40px; }
-        .legal-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(16, 126, 177, 0.2); padding: 40px 20px; text-decoration: none; color: var(--text); transition: 0.3s; border-radius: 8px; }
-        .legal-card:hover { background: rgba(16, 126, 177, 0.1); border-color: var(--accent); transform: translateY(-10px); }
-        .legal-card h3 { font-family: 'Playfair Display', serif; color: var(--accent); margin-bottom: 10px; }
-        .nav-back { text-decoration: none; color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
-        .nav-back:hover { color: var(--accent); }
+        :root {
+            --navy: #001936;
+            --navy-light: #002b5c;
+            --teal: #365470;
+            --blue-accent: #1c6f96;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            background-color: var(--navy);
+            background-attachment: fixed;
+        }
+
+        /* Navigation */
+        .manual-nav {
+            padding: 15px 5%;
+            background: rgba(0, 25, 54, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: var(--teal);
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .back-link:hover { opacity: 0.8; }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 5% 60px;
+            text-align: center;
+            background: radial-gradient(circle at center, var(--navy-light) 0%, var(--navy) 100%);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .hero p {
+            color: var(--teal);
+            font-size: 1.1rem;
+            margin-top: 15px;
+            font-weight: 300;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 60px;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 100px;
+            border-top: 1px solid var(--border);
+            padding-top: 60px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: var(--teal);
+            font-size: 1.3rem;
+            margin-top: 40px;
+        }
+
+        /* Image Styling - Smaller & Sophisticated */
+        .manual-img {
+            width: 70%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            margin: 40px auto;
+            display: block;
+            border: 1px solid var(--border);
+        }
+
+        /* Lists & Notes */
+        ul { padding-left: 20px; list-style-type: none; }
+        li { margin-bottom: 15px; position: relative; }
+        li::before { content: "•"; color: var(--teal); position: absolute; left: -20px; font-weight: bold; }
+
+        .engineering-note {
+            background: rgba(45, 212, 191, 0.05);
+            border-left: 4px solid var(--teal);
+            padding: 25px;
+            border-radius: 8px;
+            font-style: italic;
+            margin: 40px 0;
+            color: var(--text-muted);
+        }
+
+        .confidence-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Technical Specs Table */
+        .tech-specs {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .tech-specs p { margin: 10px 0; font-size: 0.9rem; border-bottom: 1px solid var(--border); padding-bottom: 5px; }
+
+        /* Legal Footer */
+        .legal-footer {
+            background: #001229;
+            padding: 100px 5%;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .legal-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .legal-btn {
+            text-decoration: none;
+            color: var(--text-muted);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .legal-btn:hover {
+            border-color: var(--teal);
+            color: var(--teal);
+            background: rgba(45, 212, 191, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .manual-img { width: 100%; }
+            .hero h1 { font-size: 2.2rem; }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="nav-back">← Back to SoftOcean</a>
-        <h1>PlanktoSpace App</h1>
-        <p class="subtitle">Legal, Support, and Transparency Documentation</p>
+
+    <nav class="manual-nav">
+        <a href="index.html" class="back-link">← Back to SoftOcean</a>
+        <img src="photos/soft_ocean_final.png" alt="Logo" style="height: 35px;">
+    </nav>
+
+    <header class="hero">
+        <h1>PlanktoSpace: User Guide & Operational Manual</h1>
+        <p>Synchronizing in-situ sampling with satellite overpasses.</p>
     </header>
+
     <div class="container">
-        <div class="legal-grid">
-<a href="planktospace-legal/privacy.html" class="legal-card"><h3>Privacy Policy</h3><p>Data handling & user rights</p></a>
-<a href="planktospace-legal/terms.html" class="legal-card"><h3>Terms of Use</h3><p>App usage & safety rules</p></a>
-<a href="planktospace-legal/support.html" class="legal-card"><h3>Support</h3><p>Contact & troubleshooting</p></a>
-<a href="planktospace-legal/notices.html" class="legal-card"><h3>Third-Party Notices</h3><p>Hosting & software licenses</p></a>        </div>
+        
+        <div class="intro-text">
+            <p>PlanktoSpace is a decision-support tool designed for marine researchers. It solves a specific high-cost problem: ensuring that expensive water sampling occurs exactly when an ocean-colour satellite (Sentinel-3, PACE, Sentinel-2) is overhead, provided the sky is clear and the sea state allows for operation.</p>
+            <img src="photos/welcome-screen.png" class="manual-img" alt="Welcome Screen">
+        </div>
+
+        <!-- Section 1 -->
+        <section class="section">
+            <h2>1. The Dashboard & Map</h2>
+            <p>Upon launching, you are presented with the operational map. This interface is designed to be lightweight and responsive, even on older devices used in the field.</p>
+            
+            <img src="photos/select_location.png" class="manual-img" alt="Map Interface">
+
+            <ul>
+                <li><strong>Select Location:</strong> Tap anywhere on the map or use the "My Location" button to snap to your vessel's GPS coordinates.</li>
+                <li><strong>Search Criteria:</strong> The app defaults to a 2-day window. Use the "Refine Search" button to adjust:
+                    <ul>
+                        <li><strong>Time Window:</strong> Filter passes to your working hours (e.g., 08:00 - 16:00 Local Time).</li>
+                        <li><strong>Chlorophyll Data:</strong> Toggle "Include Chlorophyll" Off for rapid geometric checks, or On to fetch the latest NOAA VIIRS data (requires ~20s processing time).</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="engineering-note">
+                <strong>Engineering Note:</strong> The map engine is built on a custom Leaflet implementation optimized for offline caching. Once a location is queried, the data is persisted locally, allowing you to review results even if you lose signal at sea.
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="section">
+            <h2>2. Analyzing Opportunities</h2>
+            <p>Once you tap "Check Satellites", the system performs a real-time fusion of orbital data and weather forecasting.</p>
+            
+            <img src="photos/passes_with_scores.png" class="manual-img" alt="Pass Results">
+
+            <h3>The Opportunity Score (0–100)</h3>
+            <p>We don't just list times; we rank them. The proprietary scoring algorithm weights four factors:</p>
+            <ul>
+                <li><strong>Cloud Cover (40%):</strong> Derived from multiple sources (Open-Meteo, MET Norway).</li>
+                <li><strong>Elevation Angle (30%):</strong> Higher elevation means less atmospheric interference.</li>
+                <li><strong>Logistics (15%):</strong> Distance from your vessel to the satellite's nadir.</li>
+                <li><strong>Science (15%):</strong> Historical chlorophyll-a presence (is there anything to see?).</li>
+            </ul>
+
+            <h3>Source Confidence Indicators</h3>
+            <p>PlanktoSpace uses a <strong>Hybrid Prediction Engine</strong>. We cross-reference API predictions (N2YO) with our own local SGP4 orbital propagator (Skyfield) using fresh TLE data.</p>
+            <div class="confidence-indicator">🟢 <strong>Green Dot:</strong> High Confidence. Validated by multiple calculation engines.</div>
+            <div class="confidence-indicator">🟡 <strong>Amber Dot:</strong> Standard Confidence. Predicted by a single source.</div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="section">
+            <h2>3. Pass Details & Context</h2>
+            <p>Tapping a pass reveals the full scientific context required for mission planning.</p>
+            
+            <img src="photos/pass-deatils.png" class="manual-img" alt="Pass Detail">
+
+            <ul>
+                <li><strong>Geometry:</strong> View the exact Max Elevation, Azimuth, and Off-Nadir Angle.</li>
+                <li><strong>Environmental Context:</strong>
+                    <ul>
+                        <li>Wind & Waves: Vital for deployment safety.</li>
+                        <li>Cloud Sources: We compare multiple weather models to reduce uncertainty.</li>
+                    </ul>
+                </li>
+                <li><strong>External Verification:</strong>
+                    <ul>
+                        <li>Windy.com: Deep link directly to the specific location/time layer.</li>
+                        <li>NASA Worldview: Jump to the specific satellite pass visual to check historical trends.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="section">
+            <h2>4. Managing Data</h2>
+            <p>Field campaigns are dynamic. PlanktoSpace allows you to curate your schedule.</p>
+            <ul>
+                <li><strong>Saving:</strong> Tap the Star Icon to save a pass to your local device database.</li>
+                <li><strong>Offline Access:</strong> Saved passes are available without an internet connection.</li>
+                <li><strong>Export:</strong> In the "Saved" tab, you can select multiple passes and "Copy as JSON". This allows you to paste the exact orbital parameters into your cruise reports or Python/R analysis scripts.</li>
+            </ul>
+            <div class="engineering-note">
+                <strong>Privacy by Design:</strong> This application operates on an anonymous, serverless architecture. Your location data is processed ephemerally for the calculation and is never tracked or sold.
+            </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="section">
+            <h2>5. Troubleshooting & FAQ</h2>
+            <p><strong>Q: Why do I see a difference between this app and other trackers?</strong><br>
+            A: Most trackers show "Visual Passes" (when the satellite reflects sunlight at night). PlanktoSpace calculates Geometric/Radio Passes specifically for daytime optical sensing. Furthermore, we account for the specific Swath Width of instruments like OLCI and MSI, ensuring the pass is actually usable for your sensor.</p>
+
+            <p><strong>Q: What if I have no internet?</strong><br>
+            A: If you have previously searched for a location, the data is cached. If you are moving into a dead zone, we recommend running a search for your target coordinates while you still have connectivity.</p>
+
+            <div class="tech-specs">
+                <h3 style="margin-top:0">Technical Specifications</h3>
+                <p><strong>Backend:</strong> Python FastAPI (Async/Parallel execution)</p>
+                <p><strong>Orbital Math:</strong> SGP4 Propagation (Skyfield) + N2YO Fusion</p>
+                <p><strong>Infrastructure:</strong> Google Cloud Platform (Serverless)</p>
+                <p><strong>Maintainer:</strong> SoftOcean</p>
+            </div>
+        </section>
+
     </div>
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+        <h2>Legal & Transparency</h2>
+        <div class="legal-grid">
+            <a href="planktospace-legal/privacy.html" class="legal-btn">Privacy Policy</a>
+            <a href="planktospace-legal/terms.html" class="legal-btn">Terms of Use</a>
+            <a href="planktospace-legal/support.html" class="legal-btn">Support</a>
+            <a href="planktospace-legal/notices.html" class="legal-btn">Notices</a>
+        </div>
+        <p style="margin-top: 40px; color: var(--text-muted); font-size: 0.8rem;">&copy; 2024 SoftOcean Ltd. For custom inquiries, please contact us via the Feedback form in the app.</p>
+    </footer>
+
 </body>
 </html>
